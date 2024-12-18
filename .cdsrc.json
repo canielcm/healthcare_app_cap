@@ -1,0 +1,16 @@
+{
+    "[development]": {
+        "auth": {
+            "passport": {
+                "strategy": "mock",
+                "users": {
+                    "admin": {
+                        "password": "123",
+                        "ID": "admin",
+                        "roles": ["authenticated-user"]
+                    }
+                }
+            }
+        }
+    }
+}

@@ -21,7 +21,19 @@
   },
   "cds": {
     "requires": {
-      "auth": "xsuaa"
+      "[production]": {
+        "db": "hana",
+        "auth": "xsuaa"
+      },
+      "[development]": {
+        "db": "sqlite",
+        "credentials": {
+          "url": "db.sqlite"
+        }
+      },
+      "[hybrid]": {
+        "db": "hana"
+      }
     },
     "sql": {
       "native_hana_associations": false
