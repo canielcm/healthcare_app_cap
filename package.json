@@ -7,6 +7,9 @@
   "private": true,
   "dependencies": {
     "@cap-js/hana": "^1",
+    "@sap-cloud-sdk/connectivity": "^3.24.0",
+    "@sap-cloud-sdk/http-client": "^3.24.0",
+    "@sap-cloud-sdk/resilience": "^3.24.0",
     "@sap/cds": "^8.6.0",
     "@sap/xssec": "^4",
     "express": "^4"
@@ -42,7 +45,14 @@
       },
       "API_BUSINESS_PARTNER": {
         "kind": "odata-v2",
-        "model": "srv/external/API_BUSINESS_PARTNER"
+        "model": "srv/external/API_BUSINESS_PARTNER",
+        "credentials": {
+          "url": "https://my408665-api.s4hana.cloud.sap",
+          "path": "/sap/opu/odata/sap/API_BUSINESS_PARTNER/",
+          "authentication": "BasicAuthentication",
+          "username": "CAP_BOOTCAMP_S4_API_USER",
+          "password": "WS$UGgbhkG8EEvUpccCgmedHhmHRiWeZVGfvcUPE"
+        }
       }
     },
     "sql": {

@@ -38,7 +38,6 @@ type TestStatus : String(20) enum {
 entity Patient : cuid, managed {
     firstName           : String(50);
     lastName            : String(50);
-    fullName            : String(100);
     dateOfBirth         : Date;
     gender              : Gender;
     email               : String(100);
