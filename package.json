@@ -6,10 +6,10 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "@sap/cds": "^8",
-    "express": "^4",
+    "@cap-js/hana": "^1",
+    "@sap/cds": "^8.6.0",
     "@sap/xssec": "^4",
-    "@cap-js/hana": "^1"
+    "express": "^4"
   },
   "devDependencies": {
     "@cap-js/cds-types": "^0.7.0",
@@ -20,6 +20,12 @@
     "start": "cds-serve"
   },
   "cds": {
+    "fiori": {
+      "preview": true
+    },
+    "server": {
+      "index": true
+    },
     "requires": {
       "[production]": {
         "db": "hana",

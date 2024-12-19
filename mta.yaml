@@ -27,7 +27,7 @@ modules:
     requires:
       - name: cap_healthcare_app-auth
       - name: cap_healthcare_app-db
-
+      - name: cap_healthcare_app-destination
   - name: cap_healthcare_app-db-deployer
     type: hdb
     path: gen/db
@@ -51,3 +51,8 @@ resources:
     parameters:
       service: hana
       service-plan: hdi-shared
+  - name: cap_healthcare_app-destination
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: destination
+      service-plan: lite
